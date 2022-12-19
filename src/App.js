@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import SocialSecurityClaimedAgeCard from './components/SSClaimedAgeCard/SocialSecurityClaimedAgeCard';
+import GlobalStyles from './assets/globalStyles';
+import React from 'react';
+import CardGrid from './components/CardGrid/CardGrid';
+import {
+    SMALL_VARIANT_CARDS,
+    LARGE_VARIANT_CARDS,
+    MEDIUM_VARIANT_CARDS
+} from './mocks/cards';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <GlobalStyles/>
+        <h1>Task #1 (9 cards, small variant):</h1>
+        <CardGrid cards={SMALL_VARIANT_CARDS}/>
+
+        <h1>Task #2 (3 cards, large variant):</h1>
+        <CardGrid cards={LARGE_VARIANT_CARDS}/>
+
+        <h1>Task #3 (9 > cards > 3, medium variant):</h1>
+        <CardGrid cards={MEDIUM_VARIANT_CARDS}/>
+
+        <h1>Task #4:</h1>
+        <SocialSecurityClaimedAgeCard/>
     </div>
   );
 }
