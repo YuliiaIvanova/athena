@@ -23,7 +23,7 @@ const Interaction = () => {
         };
 
         fetchHHMembers();
-    }, [hhMembers]);
+    }, []);
 
     const onListItemSelect = () => {
         setAge(hhMembers[0].retirementAge)
